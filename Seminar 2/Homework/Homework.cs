@@ -6,7 +6,7 @@
 */
 
 /*
-Console.WriteLine("Enter your 3-part number:");
+Console.WriteLine("Enter your 3-part number:"); //подчеркивает Console как ошибку про top-level statements ,(так как это у меня подпапка проекта со второго семинара), но компилируется у меня нормально.
 int num = Convert.ToInt32(Console.ReadLine());
 
 //соскучился по циклу while решил его в интерфейс добавить :)
