@@ -56,6 +56,7 @@ else Console.WriteLine(num[2]);
 1 -> нет
 */
 
+/*
 Console.WriteLine("Enter your day number:"); 
 int day = Convert.ToInt16(Console.ReadLine());
 
@@ -68,3 +69,26 @@ else
     else
     Console.WriteLine("No, it's your normal weekday.");
     }
+*/
+
+
+// Задача 4. Дано натуральное число, в котором все цифры различны. 
+//Определить, какая цифра расположена в нем левее: максимальная или минимальная.
+
+int number = 689213;
+void LeftmostMinMax(int number){
+   int i = 0;
+   char max;
+   string holder = Convert.ToString(number);
+   while (i < holder.Length){
+      if (holder[0] < holder [1])
+      {
+         max = holder [1];
+         Console.WriteLine("max is"+max);
+      }
+      i++;
+   }
+      
+   //Console.Write("Последняя цифра введенного числа: "+name.Substring(2));
+// name.Substring(2
+}

@@ -1,0 +1,15 @@
+D:\GB education\C Sharp\Additional\Task4\bin\Debug\net6.0\Task4.exe
+D:\GB education\C Sharp\Additional\Task4\bin\Debug\net6.0\Task4.deps.json
+D:\GB education\C Sharp\Additional\Task4\bin\Debug\net6.0\Task4.runtimeconfig.json
+D:\GB education\C Sharp\Additional\Task4\bin\Debug\net6.0\Task4.dll
+D:\GB education\C Sharp\Additional\Task4\bin\Debug\net6.0\Task4.pdb
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.csproj.AssemblyReference.cache
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.AssemblyInfoInputs.cache
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.AssemblyInfo.cs
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.csproj.CoreCompileInputs.cache
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.dll
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\refint\Task4.dll
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.pdb
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\Task4.genruntimeconfig.cache
+D:\GB education\C Sharp\Additional\Task4\obj\Debug\net6.0\ref\Task4.dll
