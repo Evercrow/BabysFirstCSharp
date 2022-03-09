@@ -108,11 +108,11 @@ void PrintCubicTable(int num)
     for (int i=1; i<=num ; i++)
     { 
       double num_cube = Math.Pow(i,3);  
-      Console.WriteLine("--------+-----------"); 
+      Console.WriteLine("--------+---------------"); //таблица форматирована под максимальный размер ввода в виде пятизначных чисел, но эту строку тоже можно через PadRight(10,'-') и  PadRight(30,'-') склеить, например.
       string column1 = "| "+i;
       column1 = column1.PadRight(8);
       string column2 = "| "+num_cube;
-      column2 = column2.PadRight(10);
+      column2 = column2.PadRight(14);
       Console.WriteLine(column1+column2+" |");  
     }
 }
