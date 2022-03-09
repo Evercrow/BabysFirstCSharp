@@ -31,7 +31,7 @@ Console.WriteLine("Quarter of your point is "+ PointQuarter(x,y));
 //Написать программу, которая принимает на вход номер четверти ивыводит на экран диапазон координат,
 // доступных в этой четверти
 
-/*
+
 Console.WriteLine("Enter your coordinate quarter: ");
 int quart = Convert.ToInt16(Console.ReadLine());
 ShowCoord(quart);
@@ -49,9 +49,11 @@ void ShowCoord(int quartNum)
 
     Console.WriteLine("Entered number of your quarter is not correct");
 }
-*/
+
 
 // Написать программу, принимающую на вход координаты двух точек и определяющую расстояние между ними
+
+/*
 double x1,y1,x2,y2 ;
 Console.WriteLine("Enter X coordinate of the first point: ");
 x1 = Convert.ToDouble(Console.ReadLine());
@@ -69,3 +71,4 @@ double FindInterval(double xCoord1,double yCoord1,double xCoord2,double yCoord2)
  double result = Math.Sqrt((xCoord1-xCoord2)*(xCoord1-xCoord2) + (yCoord1-yCoord2)*(yCoord1-yCoord2));
  return result;
 }
+*/
