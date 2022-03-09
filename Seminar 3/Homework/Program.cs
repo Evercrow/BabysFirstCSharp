@@ -115,4 +115,5 @@ void PrintCubicTable(int num)
       column2 = column2.PadRight(14);
       Console.WriteLine(column1+column2+" |");  
     }
+    Console.WriteLine("--------+---------------");
 }
