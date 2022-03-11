@@ -18,11 +18,11 @@
     if (max1<=input)
         {
             max2 = max1;
-            max1 = input;
+            max1 = input;            // при 2-м сравнении макс2 должен быть минимальным int
             
         }
 
-    if (min2>=input)
+    if (min1>=input)
     {
         min2 = min1;
         min1 = input;
