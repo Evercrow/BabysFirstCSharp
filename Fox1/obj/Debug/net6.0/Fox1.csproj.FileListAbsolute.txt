@@ -1,0 +1,15 @@
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.csproj.AssemblyReference.cache
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.AssemblyInfoInputs.cache
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.AssemblyInfo.cs
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.csproj.CoreCompileInputs.cache
+D:\GB education\C Sharp\Fox1\bin\Debug\net6.0\Fox1.exe
+D:\GB education\C Sharp\Fox1\bin\Debug\net6.0\Fox1.deps.json
+D:\GB education\C Sharp\Fox1\bin\Debug\net6.0\Fox1.runtimeconfig.json
+D:\GB education\C Sharp\Fox1\bin\Debug\net6.0\Fox1.dll
+D:\GB education\C Sharp\Fox1\bin\Debug\net6.0\Fox1.pdb
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.dll
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\refint\Fox1.dll
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.pdb
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\Fox1.genruntimeconfig.cache
+D:\GB education\C Sharp\Fox1\obj\Debug\net6.0\ref\Fox1.dll
