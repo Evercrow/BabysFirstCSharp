@@ -18,11 +18,11 @@
     if (max1<=input)
         {
             max2 = max1;
-            max1 = input;            // при 2-м сравнении макс2 должен быть минимальным int
+            max1 = input;           
             
         }
 
-    if (min1>=input)
+    if (min2>=input)
     {
         min2 = min1;
         min1 = input;
@@ -30,6 +30,6 @@
 
  }
   
-if(n<2) Console.WriteLine("You entered less than two numbers");
+if(n<3) Console.WriteLine("You entered less than three numbers needed for program to work correctly");
 else Console.WriteLine($"Highest numbers are {max1} and {max2}, lowest numbers are {min1} and {min2}");
 // else Console.WriteLine($"Highest numbers are {max1} and {max2}, lowest numbers are {min1} and {min2}. One of the min-max value shown is default,as there is not enough numbers entered for all comparison pairs");
