@@ -1,0 +1,15 @@
+D:\GB education\C Sharp\Seminar 4\bin\Debug\net6.0\Seminar 4.exe
+D:\GB education\C Sharp\Seminar 4\bin\Debug\net6.0\Seminar 4.deps.json
+D:\GB education\C Sharp\Seminar 4\bin\Debug\net6.0\Seminar 4.runtimeconfig.json
+D:\GB education\C Sharp\Seminar 4\bin\Debug\net6.0\Seminar 4.dll
+D:\GB education\C Sharp\Seminar 4\bin\Debug\net6.0\Seminar 4.pdb
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.csproj.AssemblyReference.cache
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.GeneratedMSBuildEditorConfig.editorconfig
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.AssemblyInfoInputs.cache
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.AssemblyInfo.cs
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.csproj.CoreCompileInputs.cache
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.dll
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\refint\Seminar 4.dll
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.pdb
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\Seminar 4.genruntimeconfig.cache
+D:\GB education\C Sharp\Seminar 4\obj\Debug\net6.0\ref\Seminar 4.dll
