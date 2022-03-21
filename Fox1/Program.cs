@@ -36,7 +36,9 @@ while (true)
         else if (input <= min2) min2 = input;
     }
 }
-
-if (n <= 2) Console.WriteLine($"Highest number is {max1} , lowest numbers is {min1}");
-else Console.WriteLine($"Highest numbers are {max1} and {max2}, lowest numbers are {min1} and {min2}");
-// else Console.WriteLine($"Highest numbers are {max1} and {max2}, lowest numbers are {min1} and {min2}. One of the min-max value shown is default,as there is not enough numbers entered for all comparison pairs");
+if (n == 0) Console.WriteLine("You did not enter any numbers");
+else
+{
+    if (n <= 2) Console.WriteLine($"Highest number is {max1} , lowest numbers is {min1}");  
+    else Console.WriteLine($"Highest numbers are {max1} and {max2}, lowest numbers are {min1} and {min2}");
+}
