@@ -39,8 +39,34 @@ void PowerTable()
     Console.WriteLine("Program has ended by user's input");
 }
 //Насколько громоздко вышло? 
-
 */
+
+
+//Цикл "ручного" возведения в степень
+
+double AltPower(int A, int B)
+{
+    double result=1;
+    for (int i = 0; i<B; i++)
+    {
+        result *=A;
+    }
+    return result;
+}
+
+Console.WriteLine("Enter number that is going to be base:");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number that is going to be power:");
+int num2 = Convert.ToInt32(Console.ReadLine());
+if (num2<1) Console.WriteLine("power number must be natural(greater than 0)");
+else Console.WriteLine($"{num1} to the power of {num2} equals {AltPower(num1,num2)}");
+
+
+
+
+
+
+
 
 
 /*
@@ -56,7 +82,7 @@ int DigitSum(int input)
 {
     int result = 0;
     input=Math.Abs(input);
-    while((double)input/10>0)
+    while(input>0)
     {
         result=result+input%10;
         input=input/10;
@@ -77,6 +103,7 @@ Console.WriteLine("Sum of digits is "+DigitSum(number));
 6, 1, 33 -> [6, 1, 33]
 */
 
+/*
 Console.WriteLine("How many numbers you need to store in array?");
 int size = Convert.ToInt16(Console.ReadLine());
 int[] my_numbers = ArrayWrite(size);
@@ -93,3 +120,4 @@ int[] ArrayWrite(int a_size)
     for (int i=0; i<=stored_nums.Length-1; i++) stored_nums[i]=Convert.ToInt32(Console.ReadLine());
     return stored_nums;
 }
+*/
