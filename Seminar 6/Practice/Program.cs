@@ -3,9 +3,11 @@
 /*
 void TriangleExist(int A, int B, int C)
 {
-    if (A > (B + C) ) Console.WriteLine("Triangle does not exist ");
-    else if (B > (A + C)) Console.WriteLine("Triangle does not exist ");
-    else if (C > (B + A)) Console.WriteLine("Triangle does not exist ");
+    // if (A > (B + C) ) Console.WriteLine("Triangle does not exist ");
+    // else if (B > (A + C)) Console.WriteLine("Triangle does not exist ");
+    // else if (C > (B + A)) Console.WriteLine("Triangle does not exist ");
+    // else Console.WriteLine("Triangle  exists ");
+    if (A > (B + C) || B > (A + C) || C > (B + A)) Console.WriteLine("Triangle does not exist ");
     else Console.WriteLine("Triangle  exists ");
 }
 
@@ -79,4 +81,19 @@ for (int i=0; i<init_array.GetLength(0);i++)
         }
     Console.WriteLine(" ");        
 }
+
+Console.WriteLine("----------------------------------");
+int [,] array_copy = new int[init_array.GetLength(0),init_array.GetLength(1)];
+
+
+for (int i=0; i<array_copy.GetLength(0);i++)
+{
+    for (int j=0; j<array_copy.GetLength(1);j++)
+        {
+            array_copy[i,j]=init_array[i,j];
+            Console.Write(array_copy[i,j]+" ");
+        }
+    Console.WriteLine(" ");        
+}
+
 
