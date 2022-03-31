@@ -72,13 +72,11 @@ Console.Write("How many columns you need: ");
 int user_columns = Convert.ToInt16(Console.ReadLine());
 
 int [,] user_matrix = FillBorder(user_rows,user_columns); 
-// PrintMatrix(user_matrix); -две функции очень пригодились для проверки того, что творится на самом деле с содержимым, когда бился над правильным выводом в консоль.
-
-
-//Теперь попробуем сделать печать и заполнение внутри одной функции, не перекидывая массивы туда-сюда.
+// PrintMatrix(user_matrix); //-две функции очень пригодились для проверки того, что творится на самом деле с содержимым, когда бился над правильным выводом в консоль.
 
 
 /*
+//Теперь попробуем сделать печать и заполнение внутри одной функции, не перекидывая массивы туда-сюда.
 void FillBorder(int rows, int columns)
 {
     int[,] border_matrix = new int[rows, columns];
