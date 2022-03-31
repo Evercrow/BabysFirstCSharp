@@ -75,20 +75,42 @@ else
 // Задача 4. Дано натуральное число, в котором все цифры различны. 
 //Определить, какая цифра расположена в нем левее: максимальная или минимальная.
 
-int number = 689213;
-void LeftmostMinMax(int number){
-   int i = 0;
-   char max;
-   string holder = Convert.ToString(number);
-   while (i < holder.Length){
-      if (holder[0] < holder [1])
-      {
-         max = holder [1];
-         Console.WriteLine("max is"+max);
-      }
-      i++;
-   }
-      
-   //Console.Write("Последняя цифра введенного числа: "+name.Substring(2));
-// name.Substring(2
+int number = 6412;
+void LeftmostMinMax(int num)
+{
+    int i = 0, max_ind=0,min_ind=0;
+    char max, min;
+    string holder = Convert.ToString(num);
+    if (holder.Length == 1)
+    {
+        Console.WriteLine("entered number is too short, need at least 2 digits");
+    }
+    else
+    {
+        max = holder[i];
+        min = holder[i];
+        while (i < holder.Length - 1)
+        {
+            if (holder[i + 1] <= min)
+            {
+                min = holder[i + 1];
+                min_ind=i+1;
+            }
+            if (holder[i + 1] >= max)
+            {
+                max = holder[i + 1];
+                max_ind = i+1;
+            }
+            i++;
+        }
+      if (max_ind<min_ind)   Console.WriteLine("max is closer to the left and equals " + max);
+      else Console.WriteLine("min is closer to the left and equals " + min);
+
+
+    }
+
+    //Console.Write("Последняя цифра введенного числа: "+name.Substring(2));
+    // name.Substring(2
 }
+
+LeftmostMinMax(number);
