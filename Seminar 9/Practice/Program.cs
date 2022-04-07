@@ -1,7 +1,32 @@
-﻿// Напишите программу, которая найдёт точку пересечения двух прямых, 
-// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+﻿// Задача 1:
+// Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+// значения b1, k1, b2 и k2 задаются пользователем.
 
-// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 5,5)
+// b1 = 2, 
+// k1 = 5, 
+// b2 = 4, 
+// k2 = 9 -> (0,5; 4,5)
+
+// string CrossPoint (double b1, double k1, double b2, double k2)
+// {
+//     double xCross = (double)(b1-b2)/(k1-k2);
+//     double yPeres = k1 * xCross + b1;
+//     string result = "" + xCross + ";" + yPeres;
+//     return result;
+// }
+
+// Console.WriteLine("Введите b1: ");
+// int bLine1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите k1: ");
+// int kLine1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите b2: ");
+// int bLine2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите k2: ");
+// int kLine2 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine($"{Peresechenie (bLine1, kLine1, bLine2, kLine2)}");
+
 
 
 // Показать треугольник Паскаля. Сделать вывод в виде равнобедренного треугольника.
@@ -44,12 +69,10 @@ DisplayPascalTriangle(CreatePascalTriangle(10));
 void DisplayPascalTriangle(int[,] pasc)
 {
     Console.WriteLine("-----------------------");
-    Console.WriteLine(tri);
     for (int i = 0; i < pasc.GetLength(0); i++)
     {
-        int cursor_position = (pasc.GetLength(1) / 2 + pasc.GetLength(1) % 2) * 2 - i;
+        int cursor_position = (pasc.GetLength(1) / 2 + pasc.GetLength(1) % 2) * 2 -i;
         if (pasc.GetLength(1) > 5 && i < 5)  Console.Write(" ");
-        if (pasc.GetLength(1) >= 10 && i < 10)  Console.Write(" ");
         for (int k = 0; k < cursor_position; k++)
         {
             
