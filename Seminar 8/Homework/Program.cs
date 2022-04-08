@@ -152,16 +152,16 @@ void Print3DArray(int[,,] array)
 int[,] FillSpiralArray(int[,] array)
 {
 
-    if (array.GetLength(0) == array.GetLength(1) && array.GetLength(0) != 1)
+    if (array.GetLength(0) == array.GetLength(1) )
     {
         int filler = 1;
         int coil_num = 0;
-        while (array.GetLength(0)-coil_num>1) FillSpiralBorders(array,ref coil_num,ref filler);
+        FillSpiralBorders(array,ref coil_num,ref filler);
         return array;
     }
     else
     {
-        Console.WriteLine("Cannot fill this array.");
+        Console.WriteLine("Cannot fill non-square array.");
         return array;
     }
 
@@ -191,7 +191,8 @@ int[,] FillSpiralBorders(int[,] bordArray,ref int coil_num,ref int filler)
         filler++;
     }
     coil_num++;
-    return bordArray;
+    if (bordArray.GetLength(0)-coil_num*2>0) return FillSpiralBorders(bordArray,ref coil_num, ref filler);
+    else return bordArray;
 
 }
 
