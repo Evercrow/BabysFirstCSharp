@@ -47,44 +47,60 @@ int[,] CreatePascalTriangle(int size)
             triangle[i, j] = triangle[i - 1, j - 1] + triangle[i - 1, j];
         }
     }
-    PrintMatrix(triangle);
+    // PrintMatrix(triangle);
     return triangle;
 
 }
 
-void PrintMatrix(int[,] printed_matrix)
-{
-    for (int i = 0; i < printed_matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < printed_matrix.GetLength(1); j++) Console.Write(printed_matrix[i, j] + " ");
-        Console.WriteLine(" ");
-    }
-}
+// void PrintMatrix(int[,] printed_matrix)
+// {
+//     for (int i = 0; i < printed_matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < printed_matrix.GetLength(1); j++) Console.Write(printed_matrix[i, j] + " ");
+//         Console.WriteLine(" ");
+//     }
+// }
 
 
 
 
-DisplayPascalTriangle(CreatePascalTriangle(10));
+
 
 void DisplayPascalTriangle(int[,] pasc)
 {
     Console.WriteLine("-----------------------");
-    for (int i = 0; i < pasc.GetLength(0); i++)
+    int height = pasc.GetLength(0);
+    string[] line_chars = new string[height];
+    int base_chars = 0;
+    for (int j = 0; j < pasc.GetLength(0); j++)
     {
-        int cursor_position = (pasc.GetLength(1) / 2 + pasc.GetLength(1) % 2) * 2 -i;
-        if (pasc.GetLength(1) > 5 && i < 5)  Console.Write(" ");
-        for (int k = 0; k < cursor_position; k++)
+
+        for (int i = 0; i < pasc.GetLength(1); i++)
         {
-            
-            Console.Write(" ");
+            if (pasc[pasc.GetLength(1) - 1 - j, i] != 0) line_chars[height - 1 - j] += pasc[pasc.GetLength(1) - 1 - j, i]+" ";
         }
-        for (int j = 0; j < pasc.GetLength(1); j++)
-        {
-            
-            if (pasc[i, j] != 0) Console.Write(pasc[i, j] + " ");
-            
-        }
-        
-        Console.WriteLine(" ");
+        // Console.WriteLine($"{height - 1 - j} line is {line_chars[height - 1 - j].Length} long");
+        base_chars = line_chars[height-1].Length;
+        // shift = shift.PadLeft(Math.Abs(line_chars[height - 1 - j].Length - base_chars) / pasc.GetLength(1));
+    }
+    Console.Clear();
+    Console.SetWindowSize(base_chars+2, height+2);
+    Console.SetBufferSize(base_chars+2, height+2);
+    for (int i = 0; i < height; i++)
+    {
+        // int cursor_position = (pasc.GetLength(1) / 2 + pasc.GetLength(1) % 2) * 2 - i;
+        // for (int k = 0; k < cursor_position; k++)
+        // {
+        //     Console.Write(" ");
+        // }
+        // line_chars[i]=line_chars[i].PadLeft(base_chars/2);
+        Console.SetCursorPosition(base_chars/2-line_chars[i].Length/2, i);
+        Console.WriteLine(line_chars[i]);
     }
 }
+Console.WriteLine("What height of Pascal triangle you need?");
+Console.WriteLine("(standart screen size can show 21 max properly)");
+int userSize = Convert.ToInt32(Console.ReadLine());
+DisplayPascalTriangle(CreatePascalTriangle(userSize));
+
+
