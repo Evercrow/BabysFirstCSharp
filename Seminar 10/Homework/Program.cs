@@ -15,7 +15,7 @@
 // 1, 7, 0, 1
 
 
-
+/*
 
 int[] SplitBinToDec(int[] bin, int[] digitInfo)
 {
@@ -38,11 +38,11 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
     Console.Write("}");
     return result;
 }
-
+*/
 
 // Дорабатываем частные случаи
 
-/*
+
 int[] SplitBinToDec(int[] bin, int[] digitInfo)
 {
     Console.Write("{ ");
@@ -53,39 +53,36 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
     {
 
         int number = 0;
-        int pow = 0;
-        for (int rank = digitInfo[pos] - 1; rank > 0; rank--)
+        if (binPosition+digitInfo[pos] > bin.Length  )
         {
-            number += bin[binPosition + rank] * (int)Math.Pow(2, pow);
-            pow++;
-        }
-        Console.Write(number + " ");
-        if (binPosition + digitInfo[pos] <= bin.Length)
-        {
-            binPosition += digitInfo[pos];
-        }
-        else
-        {
-            number = 0;pow =0;
-            while(bin.Length - pow>=binPosition)
+            int cut = digitInfo[pos] - bin.Length +binPosition;
+            while(binPosition < bin.Length)
             {
-                number += bin[bin.Length-1 - pow] * (int)Math.Pow(2, pow);
-                pow++;
+                number += bin[binPosition ] * (int)Math.Pow(2, bin.Length-1 - binPosition);
+                binPosition++;
+               
             }
-
             result[pos] = number;
             Console.Write(number + " }");
             Console.WriteLine();
-            Console.Write($"Data array is not long enough to source all required binary digits, last decimal is cut by {digitInfo[pos] - bin.Length + binPosition + 1}");
+            Console.Write($"Data array is not long enough to source all required binary digits, last decimal is cut by {cut}");
             return result;
         }
+        for (int i = 0; i < digitInfo[pos]; i++)   //количество проходов по циклу равно числу цифр в элементе info
+        {
+            number += bin[binPosition + i] * (int)Math.Pow(2, digitInfo[pos]-1-i); 
+        }
+        Console.Write(number + " ");
+        binPosition += digitInfo[pos];
+
+        
         result[pos] = number;
     }
     Console.Write("}");
     return result;
 }
-*/
 
-int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
-int[] info = { 2, 3, 3, 1};
+
+int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 ,1};
+int[] info = { 2, 3, 4, 2, 2};
 int[] decArray = SplitBinToDec(data, info);
