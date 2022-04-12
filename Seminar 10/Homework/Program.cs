@@ -86,6 +86,6 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
 }
 */
 
-int[] data = { 1, 0, 1, 1, 1, 0, 0, 1, 0 };
+int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
 int[] info = { 2, 3, 3, 1};
 int[] decArray = SplitBinToDec(data, info);
