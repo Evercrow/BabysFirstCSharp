@@ -15,7 +15,7 @@
 // 1, 7, 0, 1
 
 
-/*
+
 
 int[] SplitBinToDec(int[] bin, int[] digitInfo)
 {
@@ -38,10 +38,11 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
     Console.Write("}");
     return result;
 }
-*/
+
 
 // Дорабатываем частные случаи
 
+/*
 int[] SplitBinToDec(int[] bin, int[] digitInfo)
 {
     Console.Write("{ ");
@@ -83,7 +84,8 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
     Console.Write("}");
     return result;
 }
+*/
 
 int[] data = { 1, 0, 1, 1, 1, 0, 0, 1, 0 };
-int[] info = { 2, 3, 1, 1, 4 };
+int[] info = { 2, 3, 3, 1};
 int[] decArray = SplitBinToDec(data, info);
