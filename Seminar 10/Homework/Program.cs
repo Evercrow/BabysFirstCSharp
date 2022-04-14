@@ -87,30 +87,36 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
 {
     Console.Write("{ ");
     int[] result = new int[digitInfo.Length];
-    int binPosition = 0, cut = 0;
+    int binPosition = 0, cut = 0, cutIndex = 0;
     bool isCut = false;
     for (int pos = 0; pos < digitInfo.Length; pos++)
     {
 
         int number = 0;
+        if (isCut) goto aftercut;
         if (binPosition + digitInfo[pos] > bin.Length)
         {
+            //попробовал расширить while из 104-й до сюда для применения break, и у меня перестало показываться предупреждение, если последний элемент info четко попал на длину data, а потом пошел дальше 0-ми. 
+            // if (isCut) continue; //break или continue здесь прерывают мой внешний цикл for и не записывают пустые элементы
             cut = digitInfo[pos] - bin.Length + binPosition;
+            cutIndex = pos;
             isCut = true;
             while (binPosition < bin.Length)
             {
+                // if (isCut) continue; //break или continue здесь перезапишут мои аналитические переменные выше,когда for по pos пойдет дальше
                 number += bin[binPosition] * (int)Math.Pow(2, bin.Length - 1 - binPosition);
                 binPosition++;
-
+                
             }
         }
         else
         {
-            for (int i = 0; i < digitInfo[pos]; i++)   //количество проходов по циклу равно числу цифр в элементе info
+            for (int i = 0; i < digitInfo[pos]; i++)
             {
                 number += bin[binPosition + i] * (int)Math.Pow(2, digitInfo[pos] - 1 - i);
             }
         }
+    aftercut:
         result[pos] = number;
         Console.Write(number + " ");
         binPosition += digitInfo[pos];
@@ -120,13 +126,13 @@ int[] SplitBinToDec(int[] bin, int[] digitInfo)
     if (isCut)
     {
         Console.WriteLine();
-        Console.Write($"Data array was not long enough to source all required binary digits by {cut}");
+        Console.Write($"Data array was not long enough to source all required binary digits, last properly converted number with index {cutIndex} was cut by {cut}");
     }
     return result;
 }
 
 
 
-int[] data = { 0, 1, 1, 1, 1 , 0, 0, 0, 1 , 1, 1, 0, 1};
-int[] info = { 2, 3, 3, 4 ,2};
+int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1 }; // длина 13
+int[] info = { 2, 3, 0, 7, 1 , 2, 1 };
 int[] decArray = SplitBinToDec(data, info);
